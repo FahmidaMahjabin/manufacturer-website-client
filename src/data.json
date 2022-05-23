@@ -1,0 +1,51 @@
+[
+    {
+      "balance": "$1,956.29",
+      "picture": "https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW90aGVyJTIwYm9hcmR8ZW58MHx8MHx8&auto=format&fit=crop&w=500",
+      "quantity": 1167,
+      "name": "Mother board",
+      "supplier": "FLOTONIC",
+      "about": "Veniam et ad fugiat ad commodo sint in sint esse elit aliquip occaecat pariatur. Do dolor velit ipsum sunt ullamco proident consequat fugiat adipisicing esse Lorem eiusmod. Cupidatat magna tempor proident voluptate officia non occaecat aliqua magna nostrud dolore. Excepteur nisi aliquip excepteur enim in aliquip. Est proident ut ex nulla incididunt minim aliqua ea deserunt sint Lorem officia. Eiusmod quis ex amet mollit nulla. Sint sint deserunt id aute magna duis laboris magna occaecat culpa nulla proident in.\r\n"
+    },
+    {
+      "balance": "$3,958.11",
+      "picture": "https://img.freepik.com/free-vector/realistic-style-microchip-processor-background_52683-58932.jpg?size=626&ext=jpg&ga=GA1.2.1492663854.1648285202",
+      "quantity": 2642,
+      "name": "CPU",
+      "supplier": "SENMEI",
+      "about": "Exercitation laborum ipsum est qui aute duis non veniam occaecat aute. Amet pariatur nisi fugiat quis nisi. Irure culpa sint eiusmod ipsum non consequat est dolore consectetur. Proident laborum eiusmod et aliquip ut minim amet ex in excepteur Lorem non nostrud do. Deserunt non quis laborum quis cupidatat exercitation non. Reprehenderit reprehenderit incididunt nostrud anim culpa dolor quis anim ea elit officia.\r\n"
+    },
+    {
+      "balance": "$2,885.71",
+      "picture": "https://images.unsplash.com/photo-1542978709-19c95dc3bc7e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFtfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500",
+      "quantity": 1770,
+      "name": "RAM",
+      "supplier": "INFOTRIPS",
+      "about": "Excepteur exercitation dolore deserunt exercitation ad eiusmod ex aliquip quis nisi minim. Lorem irure aliqua sunt dolor id sunt nostrud magna ex mollit ut nulla adipisicing ipsum. Adipisicing consectetur ea culpa adipisicing labore duis sunt reprehenderit. Labore aliquip aute dolor ex deserunt ipsum commodo et nulla culpa officia ullamco quis. Enim culpa officia proident ut cillum nostrud consequat excepteur sit magna eiusmod sit ad velit. Nostrud tempor est consectetur est eiusmod duis ipsum sint aliquip pariatur proident do proident quis.\r\n"
+    },
+    {
+      "balance": "$2,259.88",
+      "picture": "https://images.unsplash.com/photo-1581725645226-92ad3b4c16d8?ixlib=rb-1.2.1&raw_url=true&q=60&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aGFyZCUyMGRpc2t8ZW58MHx8MHx8&auto=format&fit=crop&w=500",
+      "quantity": 393,
+      "name": "Hard Disk",
+      "supplier": "ECRAZE",
+      "about": "Cupidatat anim consectetur excepteur in est dolore fugiat duis. Dolore veniam elit eiusmod ipsum officia pariatur adipisicing ea ex voluptate mollit in. Officia sint quis anim deserunt irure ullamco incididunt anim veniam excepteur nostrud laboris aute. Cillum reprehenderit enim magna do eu amet anim cupidatat id quis. Sit esse sint ipsum consequat deserunt anim irure proident. Magna enim sint labore elit sint proident laboris incididunt fugiat velit.\r\n"
+    },
+    {
+      "balance": "$2,195.10",
+      "picture": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW91c2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500",
+      "quantity": 3344,
+      "name": "Mouse",
+      "supplier": "MICROLUXE",
+      "about": "Dolore enim nulla esse officia anim laborum anim deserunt elit labore est excepteur amet reprehenderit. Ex proident fugiat tempor esse nostrud consectetur est nisi voluptate anim mollit in. Ullamco proident exercitation exercitation officia. Duis ut officia enim voluptate enim dolor dolore ipsum aute nostrud commodo nulla sunt. Duis sunt reprehenderit duis pariatur veniam.\r\n"
+    },
+    {
+      "balance": "$2,047.05",
+      "picture": "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8a2V5Ym9hcmR8ZW58MHx8MHx8&auto=format&fit=crop&w=500",
+      "quantity": 178,
+      "name": "Keyboard",
+      "supplier": "KIDSTOCK",
+      "about": "Excepteur dolor incididunt adipisicing occaecat excepteur ad qui irure amet consectetur enim commodo culpa. Aliquip ut excepteur adipisicing enim consequat. Tempor elit occaecat deserunt ut. Qui exercitation quis consequat mollit reprehenderit. Tempor incididunt consectetur et id aute adipisicing reprehenderit nulla labore enim. Laborum minim dolor in reprehenderit laborum qui et anim.\r\n"
+    }
+   
+  ]
