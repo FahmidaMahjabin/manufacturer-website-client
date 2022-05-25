@@ -9,6 +9,7 @@ import MyOrders from "./Components/MyOrders/MyOrders";
 import AddAReview from "./Components/AddAReview/AddAReview";
 import MyProfile from "./Components/MyProfile/MyProfile";
 import LogIn from './Components/LogIn/LogIn';
+import Register from './Components/Register/Register';
 function App() {
 
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/purchase" element={<Purchase></Purchase>}></Route>
         <Route path="/dashBoard" element={<DashBoard></DashBoard>}></Route>
         <Route path="/logIn" element={<LogIn></LogIn>}></Route>
+        <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/dashBoard/myOrders" element={<MyOrders></MyOrders>}></Route>
         <Route path="/dashBoard/addAReview" element={<AddAReview></AddAReview>}></Route>
         <Route path="/dashBoard/myProfile" element={<MyProfile></MyProfile>}></Route>

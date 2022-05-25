@@ -1,33 +1,33 @@
 import React, { useState } from 'react';
 import login from "../../images/login.webp";
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth"
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth"
 import auth from '../../init';
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
-const LogIn = () => {
+const Register = () => {
     const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
 
-    // login using email password
+    // register using email password
     // step1:get email and password from email and password field when blur and set it to start
     // pass that email, password to the signInWithEmailPassword function when click to submite
     const [
-        signInWithEmailAndPassword,
+        createUserWithEmailAndPassword,
         user,
         loading,
         error,
-    ] = useSignInWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth);
 
 
-    // onsubmit for login
+    // onsubmit for register
     const onSubmit = (data) => {
         console.log("data:", data);
-        signInWithEmailAndPassword(data.email, data.password)
+        createUserWithEmailAndPassword(data.email, data.password)
 
     }
     const navigation = useNavigate();
-    const gotoRegisterPage = () =>{
-        navigation("/register")
+    const gotoLogIn = () =>{
+        navigation("/logIn")
 
     }
     if (loading || gloading) {
@@ -98,21 +98,21 @@ const LogIn = () => {
                                 
                             </div>
                             <div className="form-control mt-6">
-                                <button type="submit" className="btn btn-primary" >Login</button>
+                                <button type="submit" className="btn btn-primary" >register</button>
                             </div>
-                            <p>New here?
-                                    <button className='text-green-600 btn btn-link d-inline' onClick = {gotoRegisterPage}
-                                    >Create new account</button>
+                            <p>Already have an account?
+                                    <button className='text-green-600 btn btn-link d-inline' onClick = {gotoLogIn}
+                                    >go to logIn</button>
                             </p>
 
-                            {/* error for login */}
+                            {/* error for register */}
                             {error || gerror ?
                                 <p className='text-red-500'>{error?.message || gerror.message}</p> : ""
                             }
                         </form>
                         {/* divider */}
                         <div className='divider'>OR</div>
-                        <div className='btn btn-outline btn-primary' onClick={() => signInWithGoogle()} >LogIn with Google</div>
+                        <div className='btn btn-outline btn-primary' onClick={() => signInWithGoogle()} >register with Google</div>
                     </div>
                 </div>
             </div>
@@ -120,4 +120,4 @@ const LogIn = () => {
     );
 };
 
-export default LogIn;
+export default Register;
