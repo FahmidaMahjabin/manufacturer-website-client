@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+    
     return (
         <div className="navbar bg-base-100 bg-primary">
             <div className="navbar-start">
@@ -32,6 +33,7 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal p-0">
                     <li><Link to ="/" >Home</Link></li>
                     <li><Link to = "/purchase">Purchase</Link></li>
+
                     <li tabindex="0">
                         <Link to = "/dashBoard" >
                             DashBoard
