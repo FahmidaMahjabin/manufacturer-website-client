@@ -3,10 +3,13 @@ import login from "../../images/login.webp";
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth"
 import auth from '../../init';
 import { useForm } from "react-hook-form";
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 const LogIn = () => {
     const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state?.from.pathname || "/";
 
     // login using email password
     // step1:get email and password from email and password field when blur and set it to start
@@ -18,7 +21,9 @@ const LogIn = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-
+    if (user || guser){
+        navigate(from, { replace: true });
+    }
     // onsubmit for login
     const onSubmit = (data) => {
         console.log("data:", data);

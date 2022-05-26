@@ -10,6 +10,7 @@ import AddAReview from "./Components/AddAReview/AddAReview";
 import MyProfile from "./Components/MyProfile/MyProfile";
 import LogIn from './Components/LogIn/LogIn';
 import Register from './Components/Register/Register';
+import RequireAuth from './Components/LogIn/RequireAuth';
 function App() {
 
   return (
@@ -17,8 +18,17 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/purchase" element={<Purchase></Purchase>}></Route>
-        <Route path="/dashBoard" element={<DashBoard></DashBoard>}></Route>
+
+        <Route path="/purchase" element={
+          <RequireAuth>
+            <Purchase></Purchase>
+          </RequireAuth>
+        }></Route>
+        <Route path="/dashBoard" element={
+          <RequireAuth>
+            <DashBoard></DashBoard>
+          </RequireAuth>
+        }></Route>
         <Route path="/logIn" element={<LogIn></LogIn>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/dashBoard/myOrders" element={<MyOrders></MyOrders>}></Route>
