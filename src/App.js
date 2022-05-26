@@ -19,7 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
 
-        <Route path="/purchase" element={
+        <Route path="/purchase/:id" element={
           <RequireAuth>
             <Purchase></Purchase>
           </RequireAuth>
@@ -29,6 +29,7 @@ function App() {
             <DashBoard></DashBoard>
           </RequireAuth>
         }></Route>
+        
         <Route path="/logIn" element={<LogIn></LogIn>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/dashBoard/myOrders" element={<MyOrders></MyOrders>}></Route>
