@@ -4,12 +4,14 @@ import { useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-fireba
 import auth from '../../init';
 import { useForm } from "react-hook-form";
 import { useLocation, useNavigate } from 'react-router-dom';
+import UseToken from '../../Hooks/UseToken';
 const LogIn = () => {
     const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
     const navigate = useNavigate();
     const location = useLocation();
     const from = location?.state?.from.pathname || "/";
+    
 
     // login using email password
     // step1:get email and password from email and password field when blur and set it to start
@@ -20,10 +22,12 @@ const LogIn = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
-
-    if (user || guser){
+    const [token] = UseToken(user || guser);
+    if (token){
+        
         navigate(from, { replace: true });
     }
+    
     // onsubmit for login
     const onSubmit = (data) => {
         console.log("data:", data);
