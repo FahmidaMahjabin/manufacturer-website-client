@@ -4,9 +4,10 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import auth from '../../init';
 
-const PurchaseForm = ({item}) => {
+const PurchaseForm = ({item, refetch}) => {
+    console.log("item:", item)
     const [user] = useAuthState(auth); 
-    const {_id, name, quantity, minimumQuantity} = item;
+    const {_id, name, quantity, minimumQuantity, balance} = item;
     const { register,handleSubmit, formState: { errors } } = useForm();
     // function = onSubmit (click korle quantity kombe and purchase list e add hobe)
     // step1:oi object er id ta nobo
@@ -24,6 +25,8 @@ const PurchaseForm = ({item}) => {
             purchedId: id,
             purchedQuantity: purchedQuantity,
             product: name,
+            buyer: e.target.email.value,
+            price: balance
             
         }
         console.log("purchedItem:", purchesdItem)
@@ -36,6 +39,7 @@ const PurchaseForm = ({item}) => {
         })
         .then(res => res.json())
         .then(data => console.log("data from purchaseItem:", data))
+        
 
     }
     

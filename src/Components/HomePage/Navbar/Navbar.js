@@ -21,13 +21,13 @@ const Navbar = () => {
                             <li tabindex="0">
                                 <Link to="/dashBoard" className="justify-between">
                                     DashBoard
-                                    <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+                                    {/* <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg> */}
                                 </Link>
-                                <ul className="p-2">
+                                {/* <ul className="p-2">
                                     <li><Link to="/myOrders" >My Orders</Link></li>
                                     <li><Link to="/addAReview" >Add A Review</Link></li>
                                     <li><Link to="/myProfile" >My Profile</Link></li>
-                                </ul>
+                                </ul> */}
                             </li>
                             :
                             <div className="navbar-end">
@@ -49,13 +49,13 @@ const Navbar = () => {
                         <li tabindex="0">
                             <Link to="/dashBoard" className="justify-between">
                                 DashBoard
-                                <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+                                {/* <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg> */}
                             </Link>
-                            <ul className="p-2">
+                            {/* <ul className="p-2">
                                 <li><Link to="/myOrders" >My Orders</Link></li>
                                 <li><Link to="/addAReview" >Add A Review</Link></li>
                                 <li><Link to="/myProfile" >My Profile</Link></li>
-                            </ul>
+                            </ul> */}
                         </li>
                         :
                         <></>
@@ -75,10 +75,15 @@ const Navbar = () => {
                         <div >
                             <button onClick={() => signOut(auth)} className="btn">Log Out</button>
                         </div>
+
+                        <label tabindex="1" className="btn btn-ghost lg:hidden" for = "sidebar">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                        </label>
+
                     </div>
                     :
                     <div >
-                        <NavLink to = "/logIn" onClick={() => signOut(auth)} className="btn">Log In</NavLink>
+                        <NavLink to="/logIn" onClick={() => signOut(auth)} className="btn">Log In</NavLink>
                     </div>
 
             }

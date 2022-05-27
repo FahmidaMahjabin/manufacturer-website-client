@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import PurchaseForm from './PurchaseForm';
 import PurchaseItem from './PurchaseItem';
@@ -15,13 +16,18 @@ const Purchase = () => {
             .then(result => setItem(result.data))
 
         },
-        [id]
+        []
     )
+    // const {data: item, loading, refetch} = useQuery('item', () => fetch(`http://localhost:5000/manufacturerParts/${id}`)
+    // .then(res => res.json()))
+    // if(loading){
+    //     return <p>Loading......</p>
+    // }
     
     return (
         <div className='mx-auto'>
             <PurchaseItem item = {item}></PurchaseItem>
-            <PurchaseForm item = {item}></PurchaseForm>
+            <PurchaseForm item = {item} ></PurchaseForm>
         </div>
     );
 };

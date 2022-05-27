@@ -28,13 +28,17 @@ function App() {
           <RequireAuth>
             <DashBoard></DashBoard>
           </RequireAuth>
-        }></Route>
-        
+        }>
+          <Route index element={<MyOrders></MyOrders>}></Route>
+          <Route path="addAReview" element={<AddAReview></AddAReview>}></Route>
+          <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
+        </Route>
+
         <Route path="/logIn" element={<LogIn></LogIn>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
-        <Route path="/dashBoard/myOrders" element={<MyOrders></MyOrders>}></Route>
+        {/* <Route path="/dashBoard/myOrders" element={<MyOrders></MyOrders>}></Route>
         <Route path="/dashBoard/addAReview" element={<AddAReview></AddAReview>}></Route>
-        <Route path="/dashBoard/myProfile" element={<MyProfile></MyProfile>}></Route>
+        <Route path="/dashBoard/myProfile" element={<MyProfile></MyProfile>}></Route> */}
       </Routes>
 
     </div>
