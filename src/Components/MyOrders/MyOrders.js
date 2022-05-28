@@ -10,7 +10,7 @@ const MyOrders = () => {
     useEffect(
         () => {
             if (user) {
-                fetch(`http://localhost:5000/purchase?buyer=${user.email}`,
+                fetch(`https://damp-shelf-41309.herokuapp.com/purchase?buyer=${user.email}`,
                 {
                     method: "GET",
                     headers: {

@@ -30,7 +30,7 @@ const PurchaseForm = ({item, refetch}) => {
             
         }
         console.log("purchedItem:", purchesdItem)
-        fetch("http://localhost:5000/purchase", {
+        fetch("https://damp-shelf-41309.herokuapp.com/purchase", {
             method: 'PUT',
             headers:{
                 'content-type': "application/json"

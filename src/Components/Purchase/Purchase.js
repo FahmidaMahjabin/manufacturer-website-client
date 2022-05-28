@@ -12,13 +12,13 @@ const Purchase = () => {
     const [item, setItem] = useState({});
     useEffect(
         () =>{
-            axios.get(`http://localhost:5000/manufacturerParts/${id}`)
+            axios.get(`https://damp-shelf-41309.herokuapp.com/manufacturerParts/${id}`)
             .then(result => setItem(result.data))
 
         },
         []
     )
-    // const {data: item, loading, refetch} = useQuery('item', () => fetch(`http://localhost:5000/manufacturerParts/${id}`)
+    // const {data: item, loading, refetch} = useQuery('item', () => fetch(`https://damp-shelf-41309.herokuapp.com/manufacturerParts/${id}`)
     // .then(res => res.json()))
     // if(loading){
     //     return <p>Loading......</p>

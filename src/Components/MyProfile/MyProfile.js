@@ -8,7 +8,7 @@ const MyProfile = () => {
     const {displayName, photoURL, email} = user;
     const [myProfile, setMyProfile] = useState({});
     useEffect(()=>{
-        fetch('http://localhost:5000/myProfile')
+        fetch('https://damp-shelf-41309.herokuapp.com/myProfile')
         .then(res => res.json())
         .then(data => setMyProfile(data[0]))
     },

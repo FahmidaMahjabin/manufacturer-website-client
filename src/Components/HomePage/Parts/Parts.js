@@ -9,7 +9,7 @@ const Parts = () => {
     
     useEffect(
         ()=>{
-            axios.get("http://localhost:5000/manufacturerParts")
+            axios.get("https://damp-shelf-41309.herokuapp.com/manufacturerParts")
             .then(data => setParts(data.data))
         },
         []

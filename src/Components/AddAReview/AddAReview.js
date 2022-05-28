@@ -18,7 +18,7 @@ const AddAReview = () => {
 
         }
         console.log("reviewObject:", reviewObject)
-        fetch("http://localhost:5000/review", {
+        fetch("https://damp-shelf-41309.herokuapp.com/review", {
             method: "POST", 
             headers: {
                 'content-type': "application/json"

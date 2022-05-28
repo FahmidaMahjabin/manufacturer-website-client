@@ -6,7 +6,7 @@ const ProfileForm = () => {
    
     const onSubmit = data =>{
         console.log(data);
-        fetch('http://localhost:5000/myProfile', {
+        fetch('https://damp-shelf-41309.herokuapp.com/myProfile', {
             method: 'PUT',
             headers:{
                 'content-type': "application/json"
