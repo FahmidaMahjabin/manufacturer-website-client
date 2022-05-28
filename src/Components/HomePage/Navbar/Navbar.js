@@ -7,8 +7,12 @@ import auth from '../../../init';
 const Navbar = () => {
     const [user] = useAuthState(auth);
     console.log("user:", user)
+    const getLoggedOut = () =>{
+        signOut(auth);
+        localStorage.removeItem("accessToken")
+    }
     return (
-        <div className="navbar bg-base-100 bg-primary">
+        <div className="navbar bg-base-100 bg-green-600">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabindex="0" className="btn btn-ghost lg:hidden">
@@ -83,7 +87,7 @@ const Navbar = () => {
                     </div>
                     :
                     <div >
-                        <NavLink to="/logIn" onClick={() => signOut(auth)} className="btn">Log In</NavLink>
+                        <NavLink to="/logIn" onClick={getLoggedOut} className="btn">Log In</NavLink>
                     </div>
 
             }

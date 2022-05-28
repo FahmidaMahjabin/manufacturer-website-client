@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import login from "../../images/login.webp";
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth"
 import auth from '../../init';
@@ -10,6 +10,8 @@ const Register = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const location = useLocation();
     const from = location?.state?.from.pathname || "/";
+    const navigation = useNavigate();
+    const [token] = UseToken(user|| guser)
 
     // register using email password
     // step1:get email and password from email and password field when blur and set it to start
@@ -20,18 +22,22 @@ const Register = () => {
         loading,
         error,
       ] = useCreateUserWithEmailAndPassword(auth);
-
-    const [token] = UseToken(user|| guser)
-    if(token){
-        Navigate(from, { replace: true });
-    }
+    
+    useEffect(
+        ()=>{
+            if(token){
+                Navigate(from, { replace: true });
+            }
+        }, 
+        [token, from, navigation]
+    )
     // onsubmit for register
     const onSubmit = (data) => {
         console.log("data:", data);
         createUserWithEmailAndPassword(data.email, data.password)
 
     }
-    const navigation = useNavigate();
+    
     const gotoLogIn = () =>{
         navigation("/logIn")
 
