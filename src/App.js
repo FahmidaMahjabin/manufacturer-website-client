@@ -12,10 +12,15 @@ import LogIn from './Components/LogIn/LogIn';
 import Register from './Components/Register/Register';
 import RequireAuth from './Components/LogIn/RequireAuth';
 import Blog from './Components/Blog/Blog';
+import MakeAdmin from "./Components/MakeAdmin/MakeAdmin";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
 
   return (
+    
     <div>
+      <ToastContainer />
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
@@ -32,6 +37,11 @@ function App() {
         }>
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path="addAReview" element={<AddAReview></AddAReview>}></Route>
+          <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
+          {/* for admin */}
+          <Route path="makeAdmin" element={<MakeAdmin></MakeAdmin>}></Route>
+          <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
+          <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
           <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
         </Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
