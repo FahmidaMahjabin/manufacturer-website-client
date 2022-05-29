@@ -15,6 +15,7 @@ import Blog from './Components/Blog/Blog';
 import MakeAdmin from "./Components/MakeAdmin/MakeAdmin";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ManageProduct from './Components/ManageProduct';
 function App() {
 
   return (
@@ -40,7 +41,7 @@ function App() {
           <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
           {/* for admin */}
           <Route path="makeAdmin" element={<MakeAdmin></MakeAdmin>}></Route>
-          <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
+          <Route path="manageProduct" element={<ManageProduct></ManageProduct>}></Route>
           <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
           <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
         </Route>
