@@ -18,9 +18,9 @@ const MyProfile = () => {
         <div>
             <h1 className='text-5xl text-center my-8'>My Profile</h1>
             <div class="card card-side bg-base-100 shadow-xl bg-gray-100">
-                <figure><img src={photoURL} alt="propic"/></figure>
+                <figure><img src={user?.photoURL} alt="propic"/></figure>
                 <div class="card-body">
-                    <h2 class="card-title">{displayName}</h2>
+                    <h2 class="card-title">{user?.displayName}</h2>
                     <div>
                         <span className='font-bold'>Email:</span>{email}
                         {(myProfile.location)?(<p><span className='font-bold'>Location:</span>{myProfile?.location}</p> ) : ""}

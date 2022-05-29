@@ -7,14 +7,16 @@ const MyOrders = () => {
     const [user, loading] = useAuthState(auth)
     const [orders, setOrders] = useState([]);
     const navigate = useNavigate();
+    // console.log("user in myOrder:", user)
+    console.log(localStorage.getItem("accesstoken"))
     useEffect(
         () => {
             if (user) {
-                fetch(`https://damp-shelf-41309.herokuapp.com/purchase?buyer=${user.email}`,
+                fetch(`https://damp-shelf-41309.herokuapp.com/myOrders?buyer=${user.email}`,
                 {
                     method: "GET",
                     headers: {
-                        "authorization": `Bearer ${localStorage.getItem("accessToken")}`
+                        "authorization": `Bearer ${localStorage.getItem("accesstoken")}`
                     }
                 })
                     .then(res =>{
@@ -32,6 +34,9 @@ const MyOrders = () => {
         },
         [user]
     )
+    if(loading){
+        return <p>Loading....</p>
+    }
     return (
         <div>
             <h1 className='text-3xl text-red-600 text-center'>My Orders</h1>

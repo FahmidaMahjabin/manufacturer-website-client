@@ -11,7 +11,7 @@ const LogIn = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location?.state?.from.pathname || "/";
-    
+    const navigation = useNavigate();
 
     // login using email password
     // step1:get email and password from email and password field when blur and set it to start
@@ -22,19 +22,21 @@ const LogIn = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    
     const [token] = UseToken(user || guser);
     if (token){
         
         navigate(from, { replace: true });
     }
     
+    
     // onsubmit for login
     const onSubmit = (data) => {
         console.log("data:", data);
         signInWithEmailAndPassword(data.email, data.password)
 
-    }
-    const navigation = useNavigate();
+    };
+    
     const gotoRegisterPage = () =>{
         navigation("/register")
 

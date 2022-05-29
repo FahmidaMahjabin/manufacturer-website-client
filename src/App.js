@@ -11,6 +11,7 @@ import MyProfile from "./Components/MyProfile/MyProfile";
 import LogIn from './Components/LogIn/LogIn';
 import Register from './Components/Register/Register';
 import RequireAuth from './Components/LogIn/RequireAuth';
+import Blog from './Components/Blog/Blog';
 function App() {
 
   return (
@@ -25,15 +26,15 @@ function App() {
           </RequireAuth>
         }></Route>
         <Route path="/dashBoard" element={
-          <RequireAuth>
+          // <RequireAuth>
             <DashBoard></DashBoard>
-          </RequireAuth>
+          // </RequireAuth>
         }>
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path="addAReview" element={<AddAReview></AddAReview>}></Route>
           <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
         </Route>
-
+        <Route path="/blog" element={<Blog></Blog>}></Route>
         <Route path="/logIn" element={<LogIn></LogIn>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         {/* <Route path="/dashBoard/myOrders" element={<MyOrders></MyOrders>}></Route>

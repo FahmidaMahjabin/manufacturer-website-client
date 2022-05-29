@@ -9,7 +9,7 @@ const Navbar = () => {
     console.log("user:", user)
     const getLoggedOut = () =>{
         signOut(auth);
-        localStorage.removeItem("accessToken")
+        localStorage.removeItem("accesstoken")
     }
     return (
         <div className="navbar bg-base-100 bg-green-600">
@@ -20,6 +20,7 @@ const Navbar = () => {
                     </label>
                     <ul tabindex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li><Link to="/" >Home</Link></li>
+                        <li><Link to="/blog" >Blog</Link></li>
                         
                         {user ?
                             <li tabindex="0">
@@ -47,6 +48,7 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                     <li><Link to="/" >Home</Link></li>
+                    <li><Link to="/blog" >Blog</Link></li>
                     
 
                     {user ?
